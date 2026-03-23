@@ -1,11 +1,15 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
-    <div>
-      <div>
+    <div className="h-full flex-1 flex justify-center items-center">
+      <div className="border-1 rounded-lg p-4">
         <div>로그인</div>
-        <TextField />
+        <Input name="id" placeholder="id" />
+        <Input name="pw" placeholder="pw" />
+
+        <Button>로그인</Button>
       </div>
     </div>
   );
