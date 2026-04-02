@@ -1,5 +1,7 @@
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import Image from "next/image";
+// import a from '../../assets'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -7,7 +9,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* 1. 화면 전체 너비를 사용하는 상단 헤더 */}
       <header className="flex h-16 w-full shrink-0 items-center justify-between border-b px-6 sticky top-0 bg-background z-50">
         <div className="flex items-center gap-4">
-          <span className="text-lg font-bold tracking-tight">LOGO</span>
+          <Image
+            src="/images/logo.png" // 새로운 로고 이미지 위치
+            alt="AssetNAV Management Program Logo"
+            width={48} // 더 작고 직관적으로
+            height={48}
+            className="aspect-square"
+          />
           {/* 필요 시 여기에 서비스 로고나 이름을 넣으세요 */}
         </div>
 
